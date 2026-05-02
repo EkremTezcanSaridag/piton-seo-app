@@ -1,34 +1,35 @@
+'use client';
 import React from 'react';
 
-interface Props {
+interface SerpPreviewProps {
   title: string;
   desc: string;
   slug: string;
 }
 
-export default function SerpPreview({ title, desc, slug }: Props) {
-  // Eğer değerler boşsa kullanıcıya yol göstermesi için varsayılan metinler atanır.
-  const displayTitle = title || "Örnek Blog Başlığı | SEO Odaklı Başlık";
-  const displayDesc = desc || "Buraya gelecek olan açıklama metni, Google arama sonuçlarında kullanıcıların göreceği kısımdır. Anahtar kelimeleri içermesi önemlidir.";
-  const displaySlug = slug || "ornek-url-yapisi";
-
+export default function SerpPreview({ title, desc, slug }: SerpPreviewProps) {
   return (
-    <div className="p-5 bg-white border border-gray-200 rounded-xl shadow-sm max-w-[600px] font-sans">
-
-      <div className="text-[#202124] text-sm mb-1 truncate flex items-center">
-        <span className="bg-gray-100 px-2 py-0.5 rounded text-[10px] mr-2">Ad</span>
-        https://piton-seo.com › {displaySlug}
+    <div className="font-sans max-w-[600px]">
+      {/* Site İsmi ve URL */}
+      <div className="flex items-center gap-2 mb-1">
+        <div className="w-5 h-5 bg-slate-200 rounded-full flex items-center justify-center text-[10px] text-slate-500">
+          P
+        </div>
+        <div className="flex flex-col">
+          <span className="text-xs text-slate-700 leading-none">Piton SEO App</span>
+          <span className="text-[10px] text-slate-500 leading-none">https://piton.com.tr › {slug}</span>
+        </div>
       </div>
-
-      <div className="text-[#1a0dab] text-xl hover:underline cursor-pointer mb-1 truncate leading-tight">
-        {displayTitle}
-      </div>
-
-      <div className="text-[#4d5156] text-sm line-clamp-2 leading-relaxed">
-        {displayDesc}
-      </div>
+      
+      {/* Google Başlığı */}
+      <h3 className="text-[#1a0dab] text-xl hover:underline cursor-pointer mb-1 leading-tight">
+        {title || 'Blog Başlığı Buraya Gelecek'}
+      </h3>
+      
+      {/* Meta Açıklama */}
+      <p className="text-[#4d5156] text-sm leading-snug line-clamp-2">
+        {desc || 'SEO uyumlu meta açıklama burada görünecek. İçeriği üretince burası otomatik dolar.'}
+      </p>
     </div>
   );
 }
-
-
