@@ -12,16 +12,7 @@ Bu uygulama, AI servislerini kullanarak belirlenen kriterlere uygun SEO uyumlu b
 
 <div align="center">
 
-  ## 🎥 Uygulama Sunum Videosu
-
-<div align="center">
-  <video src="./public/videos/videokayit.mkv" width="100%" controls>
-    Tarayıcınız video etiketini desteklemiyor. Lütfen ./public/videos/ klasöründeki dosyayı manuel olarak oynatın.
-  </video>
-</div>
-
-> **Not:** Şartnamede istenen yerel kurulum, kullanım senaryoları  video içerisinde gösterilmiştir
-
+  
   <h3>1. İçerik Üretim ve Yapılandırma Paneli</h3>
   <img src="./public/screenshots/giriskonfigüre.png" width="800" alt="Ana Panel" />
   <br/>
